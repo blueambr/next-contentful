@@ -45,3 +45,4 @@ Thumbs.db
 .pnp.js
 .svn
 bower_components
+private.*
