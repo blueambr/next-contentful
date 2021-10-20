@@ -1,0 +1,73 @@
+{
+  "name": "@hotepp/create-next-app-extended",
+  "version": "2.1.1",
+  "description": "An extended version of Create Next App with linters, styles adjustment, pre-commit and more",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hotepp/create-next-app-extended.git"
+  },
+  "keywords": [
+    "create-next-app",
+    "create-next-app-extended",
+    "cna",
+    "cnax",
+    "react",
+    "next",
+    "nextjs",
+    "builder",
+    "task runner"
+  ],
+  "author": "Vlad Gerasimovich <hotepp@pm.me>",
+  "license": "MIT",
+  "bugs": "https://github.com/hotepp/create-next-app-extended/issues",
+  "dependencies": {
+    "bulma": "^0.9.3",
+    "next": "11.1.2",
+    "normalize.css": "^8.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "conventional-changelog-cli": "^2.1.1",
+    "eslint": "^8.0.1",
+    "eslint-config-next": "^11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-webpack-plugin": "^3.0.1",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.3",
+    "prettier": "^2.4.1",
+    "pretty-quick": "^3.1.1",
+    "sass": "^1.43.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-webpack-plugin": "^3.0.1",
+    "typescript": "^4.4.4"
+  },
+  "scripts": {
+    "build": "next build",
+    "dev": "next",
+    "lint": "lint-staged",
+    "prepare": "husky install",
+    "start": "next start",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "pretty-quick --pattern './src/**/*.{js,jsx}'",
+      "eslint './src/**/*.{js,jsx}' --fix"
+    ],
+    "src/**/*.{css,sass,scss}": [
+      "pretty-quick --pattern './src/**/*.{css,sass,scss}'",
+      "stylelint './src/**/*.{css,sass,scss}' --fix"
+    ]
+  }
+}
