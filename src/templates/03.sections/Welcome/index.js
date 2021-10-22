@@ -1,6 +1,6 @@
 import styles from './Welcome.module.scss';
 
-const Welcome = ({ data, pageTitle }) => {
+const Welcome = ({ data }) => {
   const { title, subtitle, columns } = data;
 
   return (
@@ -11,7 +11,7 @@ const Welcome = ({ data, pageTitle }) => {
             <div className="block">
               <h1
                 className={styles.title}
-                dangerouslySetInnerHTML={{ __html: pageTitle }}
+                dangerouslySetInnerHTML={{ __html: title }}
               />
             </div>
             <div className="block">

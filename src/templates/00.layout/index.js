@@ -1,8 +1,6 @@
 import Head from 'next/head';
 
-const Layout = ({ children, data }) => {
-  const { title } = data;
-
+const Layout = ({ children, title }) => {
   return (
     <>
       <Head>
